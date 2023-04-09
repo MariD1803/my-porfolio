@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+.btn {
+  background-image: linear-gradient(to left,  #f7b9c6 , #ee91a1,  #f7b9c6 ); 
+  color: black;
+    height: 30px;
+    font-weight: 700;
+    border-radius: 3px;
+    border: black solid 0.1px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hidden {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tasksContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: flex-end;
+  margin: 3rem;
+  gap: 6px;
+  border-radius: 3px;
+  height: max-content;
+  width: 465px;
+  box-shadow: rgba(26, 25, 25, 0.753) 0px 4px 8px 0px;
+  -webkit-box-pack: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-bottom: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.taskLi {
+  list-style: none;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.divDescription {
+  width: 50%;
+}
+
+.divIcono {
+  width: 20%;
+}
+
+h3 {
+  margin: 0 0 5px 0;
+}
+
+p {
+  margin: 0;
 }
