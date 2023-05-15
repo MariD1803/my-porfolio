@@ -1,14 +1,12 @@
-
-import { Provider } from 'react-redux';
 import './App.css';
-import Form from './components/Form/Form';
-import { store } from './components/redux/store';
+import './media.css';
+import Rutas from './components/Router/Rutas';
 
 function App() {
+
   return (
     <>
-    <Provider  store={store}><Form></Form></Provider>
-      
+      <Rutas></Rutas>
     </>
   );
 }

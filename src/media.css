@@ -1,0 +1,320 @@
+@media (min-width: 1400px) {
+
+    .position-absolute-lang {
+        position: absolute;
+        right: 2rem;
+        top: 2.2rem;
+    }
+
+    
+
+    /*Home*/
+    .cover-img {
+        width: 600px;
+        height: 700px !important; 
+        background: url(./img/prueba.png)top/cover no-repeat;
+    }
+
+    .div-title h2, #home-title{
+        font-size: 30px;
+    }
+    .css-ubg1nw {
+        font-size: 16px;
+    }
+
+    .navbar-list {
+        font-size: 22px;
+    }
+
+    
+    #home-description{
+        font-size: 22px;
+    }
+
+    /*Projects*/
+
+    .div-projects-rigth h2{
+        font-size: 25px;
+    }
+
+    .projects-description {
+        text-align: justify;
+        font-size: 19px;
+    }
+
+    .div-container-card {
+        height: 360px;
+    }
+
+    /*Education*/
+
+    .div-education h2 {
+        font-size: 25px;
+    }
+    .div-education h4, .div-education p {
+        font-size: 20px;
+    }
+
+    /*Skills*/
+
+    .div-container-skills h3{
+        font-size: 25px;
+    }
+    #skills-titulo{
+        font-size: 30px;
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+    .direction-row {
+        display: flex;
+    flex-direction: row;
+    }
+
+    .container-navbar {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: 200;
+    }
+
+    
+    /*Home*/
+    .cover-img {
+        width: 300px;
+        height: 400px !important; 
+        background: url(./img/prueba.png)center/cover no-repeat;
+    }
+
+    .div-title h2, #home-title{
+        font-size: 22px;
+    }
+    .css-ubg1nw {
+        font-size: 14px;
+    }
+
+    .navbar-list {
+        font-size: 16px;
+    }
+
+    
+    #home-description{
+        font-size: 16px;
+    }
+
+    /*Projects*/
+
+    .div-projects-rigth h2{
+        font-size: 20px;
+    }
+
+    .projects-description {
+        text-align: justify;
+        font-size: 16px;
+    }
+
+    .div-container-card {
+        height: 320px;
+        width: 90%;
+    }
+
+    /*Education*/
+
+    .div-education h2 {
+        font-size: 22px;
+    }
+    .div-education h4, .div-education p {
+        font-size: 16px;
+    }
+    .div-container-card-education {
+        width: 90%;
+    }
+
+    /*Skills*/
+    .div-container-skills {
+        width: 100%;
+    }
+
+    .div-container-skills h3{
+        font-size: 22px;
+    }
+    #skills-titulo{
+        font-size: 25px;
+    }
+
+
+
+
+}
+
+@media (max-width: 580px) {
+    
+    
+    /*Home*/
+    .div-container {
+        flex-direction: column;
+    }
+
+    .div-container-information{
+        width: 85%;
+    }
+    .position {
+        position: absolute;
+        top: 80px;
+        height: 720px;
+    }
+
+    .cover-img {
+        width: 300px;
+        height: 350px !important; 
+        background: url(./img/prueba.png)top/cover no-repeat;
+    }
+
+    .div-title h2, #home-title{
+        font-size: 20px;
+        margin-bottom: 0.5rem;
+    }
+    
+    #home-description{
+        font-size: 16px;
+        text-align: justify !important;
+        display: block;
+    }
+
+    /*Projects*/
+    .div-projects-rigth{
+        width: 95%;
+        padding: 0;
+        border-radius: 0;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        height: 320px;
+        padding-left: 20px;
+    }
+
+    .div-projects-rigth h2{
+        font-size: 20px;
+    }
+
+    .projects-description {
+        text-align: justify;
+        font-size: 16px;        
+        width: 90%;
+    }
+
+    .div-container-card {
+        flex-direction: column;
+        width: 85%;
+        height: auto;
+        
+    border-radius: 22px;
+    }
+    .imagen-projects {
+        width: 100%;        
+        border-top-right-radius: 20px !important;        
+        border-top-left-radius: 20px !important;        
+        border-bottom-left-radius: 0px;
+    }
+
+    #imagen-dc {
+        border-top-right-radius: 20px !important;        
+        border-top-left-radius: 20px !important;        
+        height: 14rem;
+          width: 100%;
+          background: url(./img/dc.PNG)center/cover;
+      }
+      
+      #imagen-hs {
+        height: 14rem;
+        width: 75%;
+        background: url(./img/hs.png)center/cover;
+      }
+
+      
+    /*Education*/
+
+    .div-education h2 {
+        font-size: 22px;
+    }
+    .div-education h4, .div-education p {
+        font-size: 18px;
+    }
+    .div-container-card-education {
+        width: 90%;
+    }
+
+    .education-description {
+        width: 96% !important;
+    }
+}
+
+
+@media (max-width: 425px) {
+
+    .container-filtros-page {
+        padding-inline-end: 4rem;
+    }
+
+    
+
+    .navbar-list {
+        font-size: 18px;
+    }
+
+    
+    /*Home*/
+    .div-container {
+        flex-direction: column;
+    }
+
+    .div-container-information{
+        width: 85%;
+    }
+    .position {
+        position: absolute;
+        top: 80px;
+        height: 720px;
+    }
+
+    .cover-img {
+        width: 300px;
+        height: 350px !important; 
+        background: url(./img/prueba.png)top/cover no-repeat;
+    }
+
+    .div-title h2, #home-title{
+        font-size: 20px;
+        margin-bottom: 0.5rem;
+    }
+    
+    #home-description{
+        font-size: 16px;
+        text-align: justify !important;
+        display: block;
+    }
+
+    
+
+
+    /*Skills*/
+    .div-container-skills {
+        width: 100%;
+    }
+
+    .div-container-skills h3{
+        font-size: 20px;
+    }
+    #skills-titulo{
+        font-size: 22px;
+    }
+
+
+
+
+}
