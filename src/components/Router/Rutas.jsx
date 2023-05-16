@@ -107,7 +107,7 @@ const Rutas = () => {
                 >
                   <CiLight />
                 </button>
-                <button className="html-dark btn-bc" onClick={() => {backgroundDark(); setBc(true) }}>
+                <button className="html-dark btn-bc" onClick={() => {backgroundDark();}}>
                   <MdDarkMode />
                 </button>
               </div>
