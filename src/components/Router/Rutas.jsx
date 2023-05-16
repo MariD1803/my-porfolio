@@ -146,7 +146,6 @@ const Rutas = () => {
         <Routes>
           <Route
             path="/"
-            chooseLanguage={chooseLanguage}
             element={<Home />}
           ></Route>
           <Route path="projects" element={<Projects />}></Route>
