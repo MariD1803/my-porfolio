@@ -17,6 +17,11 @@ import Header from "../Navbar/Header.jsx";
 import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 
+
+
+let lang = localStorage.getItem("lang") || "es";
+
+
 const Rutas = () => {
   const mounted = useRef(false);
 
@@ -27,9 +32,6 @@ const Rutas = () => {
       chooseLanguage(lang);
     };
   }, []);
-
-  let lang = localStorage.getItem("lang") || "es";
-
   const chooseLanguage = (langSelected) => {
     let _ = localStorage.setItem("lang", langSelected);
     for (let source of langSources) {
