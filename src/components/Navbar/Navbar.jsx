@@ -42,10 +42,10 @@ const Navbar = ({ open, bc, handleClick }) => {
   return (
     <NavbarWrapper open={open} bc={bc}>
       <div className='container-navbar' id='navbar' >
-        <Link to="/" className='navbar-list' onClick={handleClick}><div id="navbar-title-about"></div></Link>
-        <Link to="/projects" className='navbar-list'  onClick={handleClick}><div id='navbar-title-projects'></div></Link>
-        <Link to="/education" className='navbar-list'  onClick={handleClick}><div id='navbar-title-education'></div></Link>
-        <Link to="/skills" className='navbar-list'  onClick={handleClick}><div id='navbar-title-skills' ></div></Link>
+        <Link to="/" className='navbar-list' onClick={handleClick}><div id="navbar-title-about">ACERCA DE MI</div></Link>
+        <Link to="/projects" className='navbar-list'  onClick={handleClick}><div id='navbar-title-projects'>PROYECTOS</div></Link>
+        <Link to="/education" className='navbar-list'  onClick={handleClick}><div id='navbar-title-education'>EDUCACION</div></Link>
+        <Link to="/skills" className='navbar-list'  onClick={handleClick}><div id='navbar-title-skills' >HABILIDADES</div></Link>
 
        
         
