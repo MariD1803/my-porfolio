@@ -18,10 +18,13 @@ import { CiLight } from "react-icons/ci";
 
 
 
-let lang = localStorage.getItem("lang") || "es";
+
+var lang = localStorage.getItem("lang") != undefined ? localStorage.getItem("lang") : "es" 
 
 
 const Rutas = ({langSources}) => {
+
+  
   const mounted = useRef(false);
 
   useEffect(() => {
@@ -32,6 +35,7 @@ const Rutas = ({langSources}) => {
     };
   }, []);
   const chooseLanguage = (langSelected) => {
+    console.log(lang)
     let _ = localStorage.setItem("lang", langSelected);
     for (let source of langSources) {
       let elem = document.getElementById(source.id);
@@ -146,12 +150,12 @@ const Rutas = ({langSources}) => {
 
         <Routes>
           <Route
-            path="/"
+            path="/" lang={lang}
             element={<Home />}
           ></Route>
-          <Route path="projects" element={<Projects />}></Route>
-          <Route path="education" element={<Education />}></Route>
-          <Route path="skills" element={<Skills />}></Route>
+          <Route path="projects" lang={lang}  element={<Projects />}></Route>
+          <Route path="education" lang={lang}  element={<Education />}></Route>
+          <Route path="skills"  lang={lang}  element={<Skills />}></Route>
         </Routes>
       </Router>
     </div>

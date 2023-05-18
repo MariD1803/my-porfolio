@@ -131,34 +131,32 @@ const StyledButtonBlue = styled.button `
     width: 136px;
   }
 `
-
+var lang = localStorage.getItem("lang") != undefined ? localStorage.getItem("lang") : "es" 
 
 
 const Education = () => {
 
-  const chooseLanguage = (langSelected) => {
-    let _ = localStorage.setItem("lang",langSelected)
-    for (let source of langSources){
-      let elem = document.getElementById(source.id)
-      if (elem == null){
-        continue
-      }
-      elem.innerHTML = source.langValue[langSelected]
-    }
-  };
-
+  
   const mounted = useRef(false);
 
-    useEffect(() => {
-        mounted.current = true;
+  useEffect(() => {
+    mounted.current = true;
 
-        return () => {
-            chooseLanguage(lang)
-        };
-    }, []);
-
-  let lang = localStorage.getItem("lang") || "es"
-
+    return () => {
+      chooseLanguage(lang);
+    };
+  }, []);
+  const chooseLanguage = (langSelected) => {
+    console.log(lang)
+    let _ = localStorage.setItem("lang", langSelected);
+    for (let source of langSources) {
+      let elem = document.getElementById(source.id);
+      if (elem == null) {
+        continue;
+      }
+      elem.innerHTML = source.langValue[langSelected];
+    }
+  };
 
   return (
     <div className='div-container-projects-and-education'>

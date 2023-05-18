@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { langSources } from "../../app/data";
 import { FaPython, FaCss3Alt, FaReact,FaNodeJs, FaGitAlt, FaNpm} from 'react-icons/fa'
 import { SiJavascript, SiChakraui, SiMui, SiStyledcomponents, SiBootstrap,SiCanva, SiSelenium,SiMysql,SiApache} from 'react-icons/si'
 import { AiFillHtml5,AiFillGithub} from 'react-icons/ai'
@@ -84,10 +85,32 @@ const ContainerBlue = styled.div `
 `
 
 
-
+var lang = localStorage.getItem("lang") != undefined ? localStorage.getItem("lang") : "es" 
 
 
 const Skills = () => {
+    
+  const mounted = useRef(false);
+
+  useEffect(() => {
+    mounted.current = true;
+
+    return () => {
+      chooseLanguage(lang);
+    };
+  }, []);
+  const chooseLanguage = (langSelected) => {
+    console.log(lang)
+    let _ = localStorage.setItem("lang", langSelected);
+    for (let source of langSources) {
+      let elem = document.getElementById(source.id);
+      if (elem == null) {
+        continue;
+      }
+      elem.innerHTML = source.langValue[langSelected];
+    }
+  };
+
   return (
    <DivPrincipal >
      <DivSecond>
