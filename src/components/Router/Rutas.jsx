@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { langSources } from "../../app/data.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "../pages/home";
 import Projects from "../pages/projects";
@@ -22,7 +21,7 @@ import { CiLight } from "react-icons/ci";
 let lang = localStorage.getItem("lang") || "es";
 
 
-const Rutas = () => {
+const Rutas = ({langSources}) => {
   const mounted = useRef(false);
 
   useEffect(() => {
@@ -45,8 +44,8 @@ const Rutas = () => {
 
   const setLanguage = (e) => {
     let langSelected = e.currentTarget.getAttribute("btn-lang");
-    chooseLanguage(langSelected);/* 
-    document.querySelector(".chakra-collapse").style.display = "none" */
+    chooseLanguage(langSelected);
+    document.querySelector(".chakra-collapse").style.display = "none"
     
   };
 
@@ -121,7 +120,7 @@ const Rutas = () => {
               <Accordion allowToggle>
                 <AccordionItem>
                   <h2>
-                    <AccordionButton /* onClick={ showLanguage }  */cursor={"pointer"} /* id="accordion_button" */>
+                    <AccordionButton onClick={ showLanguage } cursor={"pointer"} id="accordion_button">
                       <Box
                         as="span"
                         flex="1"
