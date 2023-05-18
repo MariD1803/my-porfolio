@@ -138,10 +138,12 @@ const DivIconos = styled.div `
     font-size: 28px;
   }
 `
-var lang = localStorage.getItem("lang")
 
 const Projects = () => {
-  
+
+
+  let lang = localStorage.getItem("lang")
+
   const mounted = useRef(false);
 
   useEffect(() => {

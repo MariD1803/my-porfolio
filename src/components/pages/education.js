@@ -131,12 +131,12 @@ const StyledButtonBlue = styled.button `
     width: 136px;
   }
 `
-var lang = localStorage.getItem("lang")
 
 
 const Education = () => {
 
-  
+  let lang = localStorage.getItem("lang")
+
   const mounted = useRef(false);
 
   useEffect(() => {
@@ -157,7 +157,6 @@ const Education = () => {
       elem.innerHTML = source.langValue[langSelected];
     }
   };
-
   return (
     <div className='div-container-projects-and-education'>
       <div className='div-container-card-education'>

@@ -34,9 +34,13 @@ const Rutas = ({langSources}) => {
       chooseLanguage(lang);
     };
   }, []);
+
+  const saveLocalStorage = langSelected => {
+    localStorage.setItem('lang', langSelected);
+  };
+
   const chooseLanguage = (langSelected) => {
-    console.log(lang)
-    let _ = localStorage.setItem("lang", langSelected);
+    saveLocalStorage(langSelected);
     for (let source of langSources) {
       let elem = document.getElementById(source.id);
       if (elem == null) {
@@ -50,6 +54,7 @@ const Rutas = ({langSources}) => {
     let langSelected = e.currentTarget.getAttribute("btn-lang");
     chooseLanguage(langSelected);
     document.querySelector(".chakra-collapse").style.display = "none"
+    window.location.reload();
     
   };
 

@@ -3,12 +3,11 @@ import { langSources } from "../../app/data";
 import Footer from "../Footer/Footer";
 
 
-var lang = localStorage.getItem("lang") != undefined ? localStorage.getItem("lang") : "es" 
 
 
 const Home = () => {
+  let lang = localStorage.getItem("lang")
 
-  
   const mounted = useRef(false);
 
   useEffect(() => {

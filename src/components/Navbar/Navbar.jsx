@@ -38,11 +38,12 @@ export const NavbarWrapper = styled.nav`
 `;
 
 
-var lang = localStorage.getItem("lang") != undefined ? localStorage.getItem("lang") : "es" 
 
 
 const Navbar = ({ open, bc, handleClick }) => {
 
+  
+  var lang = localStorage.getItem("lang") != undefined ? localStorage.getItem("lang") : "es"
   const mounted = useRef(false);
 
   useEffect(() => {
@@ -63,7 +64,6 @@ const Navbar = ({ open, bc, handleClick }) => {
       elem.innerHTML = source.langValue[langSelected];
     }
   };
-
 
   return (
     <NavbarWrapper open={open} bc={bc}>

@@ -85,11 +85,13 @@ const ContainerBlue = styled.div `
 `
 
 
-var lang = localStorage.getItem("lang")  
+ 
 
 
 const Skills = () => {
-    
+
+  let lang = localStorage.getItem("lang")
+
   const mounted = useRef(false);
 
   useEffect(() => {
@@ -110,7 +112,6 @@ const Skills = () => {
       elem.innerHTML = source.langValue[langSelected];
     }
   };
-
   return (
    <DivPrincipal >
      <DivSecond>
