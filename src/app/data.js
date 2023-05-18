@@ -1,19 +1,3 @@
-/*
-export const informationData = [
-    {
-      id: "1Eleccionenespañol",
-      name: "Mariangel Diaz",
-      description: "Desarrolladora Front-end",
-      acerca: "¡Bienvenido a mi portafolio! Soy una desarrolladora front-end apasionada por crear interfaces visualmente atractivas y fáciles de usar.Actualmente estoy ampliando mis habilidades estudiando back-end y Análisis de Base de Datos, y siempre estoy ansiosa por aplicar y ampliar mi conocimiento y experiencia a nuevos proyectos. Me esfuerzo por producir constantemente código de alta calidad que no solo funcione bien, sino que también se vea genial.Estoy emocionada de compartir mis proyectos con ustedes y espero con ansias la oportunidad de trabajar juntos.",
-    },
-    {
-      id: "1Eleccioneningles",
-      name: "Mariangel Diaz",
-      description: "Front-end Developer",
-      acerca: "¡Welcome to my portfolio! I'm a front-end developer with a passion for creating visually appealing and easy-to-use interfaces. I'm currently expanding my skills by studying back-end and Database Analytics, and I'm always eager to apply and extend my knowledge and experience to new projects. I strive to consistently produce high-quality code that not only works great, but also looks great. I'm excited to share my projects with you and look forward to the opportunity to work together.",
-    },
-]
-*/
 
 export const langSources = [
   
@@ -208,3 +192,5 @@ export const langSources = [
   },
 
 ]
+
+export default langSources
