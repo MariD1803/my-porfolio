@@ -138,7 +138,7 @@ const DivIconos = styled.div `
     font-size: 28px;
   }
 `
-var lang = localStorage.getItem("lang") != undefined ? localStorage.getItem("lang") : "es" 
+var lang = localStorage.getItem("lang")
 
 const Projects = () => {
   

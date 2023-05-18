@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
+
+import { langSources } from "../../app/data";
 
 export const NavbarWrapper = styled.nav`
   display: flex;
@@ -36,16 +38,40 @@ export const NavbarWrapper = styled.nav`
 `;
 
 
+var lang = localStorage.getItem("lang") != undefined ? localStorage.getItem("lang") : "es" 
+
+
 const Navbar = ({ open, bc, handleClick }) => {
+
+  const mounted = useRef(false);
+
+  useEffect(() => {
+    mounted.current = true;
+
+    return () => {
+      chooseLanguage(lang);
+    };
+  }, []);
+  const chooseLanguage = (langSelected) => {
+    console.log(lang)
+    let _ = localStorage.setItem("lang", langSelected);
+    for (let source of langSources) {
+      let elem = document.getElementById(source.id);
+      if (elem == null) {
+        continue;
+      }
+      elem.innerHTML = source.langValue[langSelected];
+    }
+  };
 
 
   return (
     <NavbarWrapper open={open} bc={bc}>
       <div className='container-navbar' id='navbar' >
-        <Link to="/" className='navbar-list' onClick={handleClick}><div id="navbar-title-about">ACERCA DE MI</div></Link>
-        <Link to="/projects" className='navbar-list'  onClick={handleClick}><div id='navbar-title-projects'>PROYECTOS</div></Link>
-        <Link to="/education" className='navbar-list'  onClick={handleClick}><div id='navbar-title-education'>EDUCACION</div></Link>
-        <Link to="/skills" className='navbar-list'  onClick={handleClick}><div id='navbar-title-skills' >HABILIDADES</div></Link>
+        <Link to="/" className='navbar-list' onClick={handleClick}><div id="navbar-title-about"></div></Link>
+        <Link to="/projects" className='navbar-list'  onClick={handleClick}><div id='navbar-title-projects'></div></Link>
+        <Link to="/education" className='navbar-list'  onClick={handleClick}><div id='navbar-title-education'></div></Link>
+        <Link to="/skills" className='navbar-list'  onClick={handleClick}><div id='navbar-title-skills' ></div></Link>
 
        
         

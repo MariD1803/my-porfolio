@@ -131,7 +131,7 @@ const StyledButtonBlue = styled.button `
     width: 136px;
   }
 `
-var lang = localStorage.getItem("lang") != undefined ? localStorage.getItem("lang") : "es" 
+var lang = localStorage.getItem("lang")
 
 
 const Education = () => {

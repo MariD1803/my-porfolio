@@ -85,7 +85,7 @@ const ContainerBlue = styled.div `
 `
 
 
-var lang = localStorage.getItem("lang") != undefined ? localStorage.getItem("lang") : "es" 
+var lang = localStorage.getItem("lang")  
 
 
 const Skills = () => {
