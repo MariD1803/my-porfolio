@@ -45,8 +45,8 @@ const Rutas = () => {
 
   const setLanguage = (e) => {
     let langSelected = e.currentTarget.getAttribute("btn-lang");
-    chooseLanguage(langSelected);
-    document.querySelector(".chakra-collapse").style.display = "none"
+    chooseLanguage(langSelected);/* 
+    document.querySelector(".chakra-collapse").style.display = "none" */
     
   };
 
@@ -121,7 +121,7 @@ const Rutas = () => {
               <Accordion allowToggle>
                 <AccordionItem>
                   <h2>
-                    <AccordionButton onClick={ showLanguage } cursor={"pointer"} id="accordion_button">
+                    <AccordionButton /* onClick={ showLanguage }  */cursor={"pointer"} /* id="accordion_button" */>
                       <Box
                         as="span"
                         flex="1"
