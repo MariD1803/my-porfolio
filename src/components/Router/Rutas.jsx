@@ -19,12 +19,12 @@ import { CiLight } from "react-icons/ci";
 
 
 
-var lang = localStorage.getItem("lang") != undefined ? localStorage.getItem("lang") : "es" 
+
 
 
 const Rutas = ({langSources}) => {
 
-  
+  var lang = localStorage.getItem("lang")
   const mounted = useRef(false);
 
   useEffect(() => {
